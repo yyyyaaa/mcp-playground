@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod 755 build/index.js",
-    "start": "node build/index.js",
+    "build": "tsc && chmod 755 build/weather.js && chmod 755 build/eigenlayer.js",
+    "start:weather": "node build/weather.js",
+    "start:eigenlayer": "node build/eigenlayer.js",
     "clean": "rimraf build"
   },
   "keywords": [],
@@ -33,7 +34,9 @@
     ]
   },
   "dependencies": {
+    "@mistralai/mistralai": "^1.5.2",
     "@modelcontextprotocol/sdk": "^1.7.0",
+    "dotenv": "^16.4.7",
     "zod": "^3.24.2"
   }
 }
